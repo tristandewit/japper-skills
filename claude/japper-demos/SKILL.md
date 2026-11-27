@@ -138,6 +138,11 @@ Writing them:
 
 - One feature per take, the moment the product does what it promises. No
   intros. Hold 1–2 s on each payoff so it reads.
+- Keep it to a few seconds. In a Japper video the demo plays in full after
+  the reaction, so the take's length is the rest of the video's: start on the
+  screen where it happens, speed up every wait, and end on the payoff. A take
+  that runs long is two features, or has a walk to the feature that belongs
+  before `start`.
 - Find selectors first with
   `node "$S/shot.js" <takes.js> <portrait|landscape> <path> out.png '<js using page>'`:
   dump `innerText`, a dialog's markup, button names. Use roles and visible

@@ -123,6 +123,11 @@ Writing them:
 
 - One feature per flow, the moment the product does what it promises. No
   intros. Hold 1–2 s on each payoff so it reads.
+- Keep it to a few seconds. In a Japper video the demo plays in full after
+  the reaction, so the take's length is the rest of the video's: start on the
+  screen where it happens, speed up every wait, and end on the payoff. A take
+  that runs long is two features, or has a walk to the feature that belongs
+  before `start`.
 - Find what is on a screen first, with the app open on it:
   `node "$S/look.js" <ios|android> out.png` saves a screenshot and prints
   every text, label and id Maestro can see, with where it sits. Tap by those
