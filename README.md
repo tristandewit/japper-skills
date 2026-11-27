@@ -1,6 +1,6 @@
 # Japper skills
 
-Packages that tie an AI assistant to Japper: one that works the plan through the Japper MCP server (`https://mcp.japper.video`), and one that records demo videos of the user's own web app on their own machine.
+Packages that tie an AI assistant to Japper: one that works the plan through the Japper MCP server (`https://mcp.japper.video`), and two that record demo videos of the user's own product on their own machine: a web app, or an iOS or Android app.
 
 ## japper
 
@@ -30,6 +30,18 @@ It runs on the user's machine, in the Google Chrome installed there, on a profil
 | --- | --- | --- |
 | Claude Code | `claude/japper-demos` | recorder tried on macOS against a local page; not on Windows or Linux, and not yet end to end by an assistant on an app it has not seen |
 | Codex | | not started |
-| iOS and Android apps | | not started |
 
 Claude Code: copy `claude/japper-demos` to `~/.claude/skills/japper-demos`, then ask it to "record a demo of …" from the app's repository.
+
+## japper-app-demos
+
+The same for an iOS or Android app: one video per feature, in the phone's own shape at 1920 high, with a mark on every tap, a clean status bar and slow waits sped up. The assistant writes a [Maestro](https://docs.maestro.dev) flow per feature; the recorder films the iOS simulator or an Android emulator while Maestro runs it, and cuts the film with ffmpeg.
+
+It needs Node 18+, ffmpeg, Maestro with Java 17+, and Xcode with a simulator or the Android SDK with an emulator. Nothing is sent anywhere. The tap marks are read from Maestro's log, whose wording may change between versions; a video is still made without them.
+
+| Platform | Package | Status |
+| --- | --- | --- |
+| Claude Code | `claude/japper-app-demos` | recorder tried on macOS with Maestro 2.6.1, on an iOS 26 simulator and an Android emulator, against the system Settings app; not on a real Android phone, and not yet end to end by an assistant on an app it has not seen |
+| Codex | | not started |
+
+Claude Code: copy `claude/japper-app-demos` to `~/.claude/skills/japper-app-demos`, then ask it to "record a demo of … in the iOS app" from the app's repository.
