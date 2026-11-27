@@ -1,0 +1,8 @@
+{
+  "name": "japper-demos",
+  "private": true,
+  "description": "Records demo videos of a web app for the japper-demos skill",
+  "dependencies": {
+    "playwright": "1.64.1"
+  }
+}
