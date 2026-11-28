@@ -18,7 +18,9 @@ With MCP access (bought once per account), the assistant does the thinking and t
 
 Claude Code: copy `claude/japper` to `~/.claude/skills/japper`, and add the server with `claude mcp add --transport http japper https://mcp.japper.video`.
 
-claude.ai: add `https://mcp.japper.video` as a custom connector, and upload `claude/japper` as a skill.
+claude.ai: add `https://mcp.japper.video` as a custom connector, and upload `claude/japper` as a skill (as a zip of the folder).
+
+Once connected, say "Do my Japper". The skill offers once to run that every morning on a schedule: Japper makes and posts approved videos by itself, but cannot start the assistant that writes them.
 
 ## japper-demos
 

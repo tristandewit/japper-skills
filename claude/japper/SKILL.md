@@ -1,6 +1,6 @@
 ---
 name: japper
-description: Plan, write and make short videos for a brand in Japper, through the Japper MCP server. Use when the user says "do my Japper", "plan my videos", "plan my week", "write this week's videos", "make a video about X", "set up my brand in Japper", "what is waiting in Japper", or mentions Japper at all. You do the thinking and the writing on the user's own Claude; Japper composes, renders and posts.
+description: Plan, write and make short videos for a brand in Japper, through the Japper MCP server. Use when the user says "do my Japper", "plan my videos", "plan my week", "write this week's videos", "make a video about X", "set up my brand in Japper", "what is waiting in Japper", "doe mijn Japper", or mentions Japper at all. You do the thinking and the writing on the user's own Claude; Japper composes, renders and posts.
 ---
 
 # Japper
@@ -26,9 +26,20 @@ The Japper tools are named `whats_due`, `view_brand_book`, `view_planning`, `vie
 
 ## Running it without being asked
 
-Japper cannot start you. It mails the founder when something is waiting, with the words "Do my Japper".
+Japper cannot start you. It makes every approved video on its day and posts it by itself, but the plans, the lines and the footage are yours, so they only happen when you run. Japper mails the founder when something waits on you, with the words "Do my Japper".
 
-If this Claude can run on a schedule (a routine or scheduled task), offer once to set one up: weekly, on the day before the brand's prep day, with the instruction "Do my Japper: work through whats_due and report what is left for me". A scheduled run does everything that waits on the assistant and leaves the approvals for the founder.
+So once the founder has done a run with you, and you know of no schedule set up already, offer once to run every morning on a schedule:
+
+- **Claude Code:** a scheduled task (`/schedule`), daily in the founder's morning, with the prompt "Do my Japper: work through whats_due and report what is left for me". The run needs the Japper connector: check the task has it.
+- **claude.ai or the Claude app:** a scheduled task with the same prompt, if this account offers them. If it does not, say so, and tell the founder to answer Japper's mails with "Do my Japper".
+
+A run with nothing waiting on you ends after `whats_due`. A scheduled run never approves lines: it leaves them for the founder, who approves in chat or on the planning page of the Japper app. Set nothing up without a yes.
+
+## What Japper does by itself
+
+- Makes each approved video on its day, and posts it to the connected accounts.
+- Mails the founder when no plan is running, when the running plan has a week left and nothing follows it, and when videos going out in the next days have no approved lines.
+- The account, the onboarding, connecting social accounts and billing are done in the Japper app (`https://app.japper.video`). Send the founder there for those.
 
 ## What not to do
 
